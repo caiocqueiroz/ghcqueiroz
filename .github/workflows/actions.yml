@@ -1,6 +1,11 @@
 name: Actions Workflow
 
-on: [push]
+on: 
+  push:
+  pull_request:
+    types: [closed, assigned, opened, reopened ]
+      
+     
 env: 
   DAY_OF_WEEK: Monday
   SUPER_SECRET: ${{secrets.MY_SECRET}}
