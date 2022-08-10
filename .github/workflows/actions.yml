@@ -1,6 +1,6 @@
 name: Actions Workflow
 
-on: [push, pull_request]
+on: [push]
 env: 
   DAY_OF_WEEK: Monday
   SUPER_SECRET: ${{secrets.MY_SECRET}}
