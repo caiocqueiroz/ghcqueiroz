@@ -12,7 +12,7 @@ jobs:
      Greeting: Hello
    steps:
     - name: "Say Hello Caio, itś Monday"
-      run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK and you cant see this supersecret ${{env.SUPER_SECRET}}+${GITHUB_REPOSITORY}"
+      run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK and you cant see this supersecret ${{env.SUPER_SECRET}}${GITHUB_REPOSITORY}"
       env:
         First_Name: Caio
     - name: checkout 
