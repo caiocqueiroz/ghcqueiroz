@@ -1,6 +1,6 @@
 name: Actions Workflow
 
-on: [push, pull_request]
+on: [push]
 env: 
   DAY_OF_WEEK: Monday
   SUPER_SECRET: ${{secrets.MY_SECRET}}
@@ -25,6 +25,6 @@ jobs:
       id: greet
       uses: actions/hello-world-javascript-action@v1
       with:
-       who-to-greet: Caio Queiroz
+       who-to-greet: Caio Queirozi
     - name: Log Greeting time
       run: echo "${{steps.greet.outputs.time}}"
