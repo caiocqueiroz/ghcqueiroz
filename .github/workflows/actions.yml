@@ -2,8 +2,9 @@ name: Actions Workflow
 
 on: 
   push:
-  pull request:
-    [closed, assigned, opened]
+  pull_request:
+    types: [closed, assigned, opened, reopened ]
+      
      
 env: 
   DAY_OF_WEEK: Monday
