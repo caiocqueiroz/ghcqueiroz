@@ -1,11 +1,19 @@
 name: Actions Workflow
 
 on: push
+env: 
+  DAY_OF_WEEK: Monday
 
 jobs:
   run-github-actions:
    runs-on: ubuntu-latest
+   env:
+     Greeting: Hello
    steps:
+    - name: "Say Hello Caio, itś Monday"
+      run: echo "$Greeting $FirstName. Today is $DAY_OF_WEEK"
+      env:
+        First_Name: Caio
     - name: checkout 
       uses: actions/checkout@v2.4.2
     - name: List File
